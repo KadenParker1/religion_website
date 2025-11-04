@@ -51,7 +51,7 @@ export default function App() {
   const cards = [
     { id: 1, title: "Where does revelation come from?", content: "Revelation comes from the Holy Ghost as seen in DC 8: Yea, behold, I will tell you in your mind and in your heart, by the Holy Ghost, which shall come upon you and which shall dwell in your heart. Now, behold, this is the spirit of revelation; behold, this is the spirit by which Moses brought the children of Israel through the Red Sea on dry ground." },
     { id: 2, title: "What did Joseph Smith do when he had a question?", content: "As the restoration Proclamation states:, Two hundred years ago, on a beautiful spring morning in 1820, young Joseph Smith, seeking to know which church to join, went into the woods to pray near his home in upstate New York, USA. He had questions regarding the salvation of his soul and trusted that God would direct him." },
-    { id: 3, title: "What is Bella and I's date tomorrow?", content: "Super Romance. Shopping. MAYBEEEE a hug. Temple. Homework. Dinner. homework? wicked?  and a goodnight kiss, i like that option." },
+    { id: 3, title: "inser", content: "" },
     { id: 4, title: "Feature Four", content: "This is more detail about feature four." },
   ];
 
@@ -79,7 +79,7 @@ export default function App() {
     
     <div className="min-h-screen bg-gradient-to-br from-sky-100 to-indigo-200 text-gray-900 p-8">
       <h1 className="text-4xl font-bold text-center mb-10 text-indigo-800 drop-shadow-sm">
-        I like Bella</h1>
+        Scripture Finder</h1>
 
       {/* Search bar */}
       <form
