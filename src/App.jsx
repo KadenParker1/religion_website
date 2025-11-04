@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { createClient } from "@supabase/supabase-js"
-
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvaGVxb2tqcmp4c2hybmRodGNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NzgyMDEsImV4cCI6MjA3NzM1NDIwMX0.tI1kWk-sSCxKycn33xOE-31m3xsVVkdHIWRT5cxsyc0'
-const supabaseUrl = 'https://loheqokjrjxshrndhtck.supabase.co'
+import { supabase } from './supabase'
 
 const tagOptions = [
   "agency","atonement","belief","blessings","charity","christ","cleansing",
@@ -34,7 +31,6 @@ const handleTagClick = (tag) => {
   setFilteredTags([]); // close dropdown
 };
 
-export const supabase = createClient(supabaseUrl, supabaseKey)
 
 
 
