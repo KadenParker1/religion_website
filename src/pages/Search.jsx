@@ -43,7 +43,7 @@ export default function Search() {
 
   return (
     <div className="max-w-xl mx-auto text-center">
-      <h2 className="text-2xl font-semibold mb-4">Find Scriptures by Topic</h2>
+      <h2 className="text-2xl font-semibold mb-4">Enter a Topic You Want Scriptures On</h2>
       <form onSubmit={handleSearch} className="flex justify-center gap-2 mb-4">
         <input
           value={query}
@@ -76,9 +76,9 @@ export default function Search() {
 
       {/* API Result */}
       {result && (
-        <div className="bg-white shadow p-4 rounded-lg mt-4 text-left">
-          <h3 className="font-semibold mb-2">Result:</h3>
-          <p>{result}</p>
+        <div className="bg-white shadow p-25 rounded-lg mt-4 text-left w-full">
+          <h3 className="font-semibold mb-2 text-2xl">Result:</h3>
+          <p className="text-lg">{result} </p>
         </div>
       )}
     </div>

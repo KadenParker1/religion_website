@@ -5,15 +5,16 @@ export default function Home() {
         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
           Welcome to Scripture Finder — explore, learn, and reflect on gospel topics.
         </p>
-        <iframe
-          className="mt-6 rounded-xl mx-auto"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-          title="Intro video"
-          allowFullScreen
-        ></iframe>
-      </div>
+
+        <div className="mt-6 relative pb-[56.25%] max-w-4xl mx-auto rounded-xl overflow-hidden">
+            <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/pj1TNrciyZc"
+                title="Video on Revelation"
+                allowFullScreen
+            ></iframe>
+        </div>
+    </div>
     );
   }
   
