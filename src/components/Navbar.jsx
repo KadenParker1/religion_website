@@ -7,6 +7,7 @@ export default function Navbar() {
     { to: "/search", label: "Search" },
     { to: "/cards", label: "Cards" },
     { to: "/notes", label: "Notes" },
+    { to: "/ai-search", label: "Ai-Search"}
   ];
 
   return (
