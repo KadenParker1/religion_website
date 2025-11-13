@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import Ai_search from "./pages/Ai_search"
 import Cards from "./pages/Cards";
 import Notes from "./pages/Notes";
 
@@ -14,6 +15,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/ai-search" element={<Ai_search />}/>
             <Route path="/cards" element={<Cards />} />
             <Route path="/notes" element={<Notes />} />
           </Routes>

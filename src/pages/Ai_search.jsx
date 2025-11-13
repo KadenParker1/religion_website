@@ -3,7 +3,7 @@ import { supabase } from "../supabase";
 
 const tagOptions = [/* your tag list here */];
 
-export default function Ai_Search() {
+export default function Ai_search() {
   const [query, setQuery] = useState("");
   const [result, setResult] = useState("");
   const [filteredTags, setFilteredTags] = useState([]);
@@ -55,7 +55,7 @@ export default function Ai_Search() {
           type="submit"
           className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
         >
-          Ai_Search
+          Ai_search
         </button>
       </form>
 
