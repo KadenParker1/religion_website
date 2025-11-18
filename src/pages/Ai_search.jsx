@@ -26,7 +26,7 @@ export default function Ai_search() {
     setResult("Loading...");
     try {
         // Call your Vercel serverless function
-        const response = await fetch("/ai_api_call/scripture.py", {
+        const response = await fetch("/api/scripture", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ topic: query }),
