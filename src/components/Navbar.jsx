@@ -5,9 +5,9 @@ export default function Navbar() {
   const links = [
     { to: "/", label: "Home" },
     { to: "/search", label: "Search" },
+    { to: "/ai-search", label: "Ai-Search"},
     { to: "/cards", label: "Cards" },
-    { to: "/notes", label: "Notes" },
-    { to: "/ai-search", label: "Ai-Search"}
+    { to: "/notes", label: "Notes" }
   ];
 
   return (

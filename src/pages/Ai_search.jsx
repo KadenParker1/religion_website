@@ -25,18 +25,19 @@ export default function Ai_search() {
     e.preventDefault();
     setResult("Loading...");
     try {
-      const { data, error } = await supabase
-        .from("scriptures")
-        .select("*")
-        .contains("tags", [query.toLowerCase()]);
-      if (error) throw error;
-      if (!data.length) {
-        setResult("No verses found for that topic.");
-        return;
-      }
-      const randomVerse = data[Math.floor(Math.random() * data.length)];
-      setResult(`${randomVerse.reference}: ${randomVerse.verse}`);
-    } catch (err) {
+        // Call your Vercel serverless function
+        const response = await fetch("/ai_api_call/scripture.py", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic: query }),
+        });
+    if (!response.ok) {
+            throw new Error(`Server error: ${response.statusText}`);
+         }
+        const data = await response.json();
+         setResult(data.scripture); // the returned verse from your Python function
+       }  
+    catch (err) {
       setResult("Error fetching API: " + err.message);
     }
   };
@@ -54,6 +55,7 @@ export default function Ai_search() {
         <button
           type="submit"
           className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+          disabled={!query || result === "Loading..."}
         >
           Ai_search
         </button>
