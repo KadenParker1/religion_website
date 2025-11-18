@@ -4,7 +4,6 @@ import json
 from google import genai
 import os
 import traceback
-from vercel import Request
 
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
