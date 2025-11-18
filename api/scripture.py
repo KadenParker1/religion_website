@@ -3,6 +3,9 @@ import json
 # import google.generativeai as genai
 from google import genai
 import os
+
+
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY)
 def handler(request):
     try:
