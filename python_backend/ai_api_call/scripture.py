@@ -6,7 +6,6 @@ import os
 
 
 topic = "chastity"
-GEMINI_API_KEY = "AIzaSyAWqcjFIAAP4qejTUsTRQgxpMJ13jx2Y5s"
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 def handler(req, res):
