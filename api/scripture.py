@@ -1,6 +1,4 @@
-# from http.server import BaseHTTPRequestHandler
 import json
-# import google.generativeai as genai
 from google import genai
 import os
 import traceback
