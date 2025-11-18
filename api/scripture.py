@@ -4,7 +4,7 @@ import json
 from google import genai
 import os
 
-GEMINI_API_KEY = "AIzaSyAWqcjFIAAP4qejTUsTRQgxpMJ13jx2Y5s"
+
 topic = "chastity"
 client = genai.Client(api_key=GEMINI_API_KEY)
 
