@@ -3,14 +3,10 @@ import json
 # import google.generativeai as genai
 from google import genai
 import os
-
-
-topic = "chastity"
 client = genai.Client(api_key=GEMINI_API_KEY)
-
-def handler(req, res):
+def handler(request):
     try:
-        data = req.json()
+        data = request.json()
         topic = data.get("topic", "")
         prompt = (
             f"Please give me a single verse scripture reference and its text "
@@ -22,15 +18,13 @@ def handler(req, res):
             contents=prompt
         )
         scripture = response.text
-        res.status_code = 200
-        return {"scripture": scripture}
+        return {"status": 200,
+                "headers": {"Content-Type": "application/json"},
+                "body": json.dumps({"scripture": scripture})
+                }
     except Exception as e:
-        res.status_code = 500
-        return {"error": str(e)}
-
-
-
-response = client.models.generate_content(
-    model="gemini-2.5-flash", contents=f"Please give me a single verse scripture reference from either Old Testament, New Testament, Book of Mormon, or Doctrine and Covenants and text for that scripture about the topic: {topic}"
-)
-print(response.text)
+        return {
+            "status": 500,
+            "headers": {"Content-Type": "application/json"},
+            "body": json.dumps({"error": str(e)})
+            }
