@@ -3,6 +3,7 @@ import json
 # import google.generativeai as genai
 from google import genai
 import os
+import traceback
 
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -26,6 +27,7 @@ def handler(request):
                 "body": json.dumps({"scripture": scripture})
                 }
     except Exception as e:
+        print("ERROR:", traceback.format_exc())
         return {
             "status": 500,
             "headers": {"Content-Type": "application/json"},
