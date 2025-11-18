@@ -1,7 +1,17 @@
-import json
+# import json
 
-def handler(request):
-    return {"status": 200, 
-            "headers": {"Content-Type": "application/json"},
-            "body": json.dumps({"message": "Hello world"})
-    }
+# def handler(request):
+#     return {"status": 200, 
+#             "headers": {"Content-Type": "application/json"},
+#             "body": json.dumps({"message": "Hello world"})
+#     }
+from http.server import BaseHTTPRequestHandler
+ 
+class handler(BaseHTTPRequestHandler):
+ 
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type','text/plain')
+        self.end_headers()
+        self.wfile.write('Hello, world!'.encode('utf-8'))
+        return
