@@ -26,7 +26,7 @@ export default function Ai_search() {
     setResult("Loading...");
     try {
         // Call your Vercel serverless function
-        const response = await fetch("/api/hello", { method: "POST" });
+        const response = await fetch("/api/hello", { method: "GET" });
 
         // const response = await fetch("/api/scripture", {
         //   method: "POST",
