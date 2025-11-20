@@ -26,13 +26,13 @@ export default function Ai_search() {
     setResult("Loading...");
     try {
         // Call your Vercel serverless function
-        const response = await fetch("/api/hello", { method: "GET" });
+        // const response = await fetch("/api/hello", { method: "GET" });
 
-        // const response = await fetch("/api/scripture", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/json" },
-        //   body: JSON.stringify({ topic: query }),
-        // });
+        const response = await fetch("/api/scripture", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic: query }),
+        });
     if (!response.ok) {
             throw new Error(`Server error: ${response.statusText}`);
          }
